@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Grayscale Rofi Theme
+   ========================================================================== */
+
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus-Dark";
+
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
+}
+
+* {
+    /* Color Palette */
+    bg0:     #121212;
+    bg1:     #1e1e1e;
+    bg2:     #2a2a2a;
+    bg3:     #3a3a3a;
+    fg0:     #ffffff;
+    fg1:     #b0b0b0;
+    fg2:     #707070;
+    
+    accent:  #e0e0e0;
+    border:  #444444;
+
+    /* General properties */
+    background-color: transparent;
+    text-color:       @fg1;
+    font:             "JetBrainsMono Nerd Font 10";
+    
+    margin:  0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @bg0;
+    border:           1px;
+    border-color:     @border;
+    border-radius:    0px;
+    width:            600px;
+    padding:          16px;
+}
+
+mainbox {
+    spacing: 12px;
+    children: [ inputbar, listview ];
+}
+
+/* Input Bar */
+inputbar {
+    background-color: @bg1;
+    border:           1px;
+    border-color:     @bg3;
+    border-radius:    0px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg0;
+    font:       "JetBrainsMono Nerd Font Bold 10";
+}
+
+entry {
+    text-color:        @fg0;
+    placeholder:       "Search...";
+    placeholder-color: @fg2;
+}
+
+/* List View */
+listview {
+    fixed-height: false;
+    dynamic:      true;
+    lines:        8;
+    columns:      1;
+    spacing:      4px;
+    cycle:        true;
+}
+
+element {
+    padding:       8px 12px;
+    border-radius: 0px;
+    spacing:       8px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg1;
+}
+
+element selected.normal {
+    background-color: @bg2;
+    text-color:       @fg0;
+    border:           1px;
+    border-color:     @bg3;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg1;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             18px;
+}
